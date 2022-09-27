@@ -27,6 +27,7 @@ const { title } = Astro.props;
 
 		--black: hsl(12, 5%, 4%);
 		--white: hsl(10, 21%, 95%);
+		--color-primary: rgb(231, 59, 147); /* pink */
 		--color-text: var(--black);
 		--color-bg: var(--white);
 		--color-shadow: rgba(0, 0, 0, .1);
@@ -61,6 +62,18 @@ const { title } = Astro.props;
 	h2 {
 		font-size: var(--font-size-lg);
 	}
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--shadow);
+    transition: border-color 150ms;
+  }
+  
+  a:focus,
+  a:hover {
+    border-bottom-color: var(--color-primary);
+  }
 
 	code {
 		padding: 2px 5px;
