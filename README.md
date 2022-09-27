@@ -16,7 +16,7 @@ Use It
 
     GET https://raen.dev/api/[CONTRACT_NAME].json
 
-Returns a [JSON Schema](https://json-schema.org/) for CONTRACT_NAME. If the contract name ends in `.near`, it's assumed to be on NEAR's mainnet. Otherwise, it assumes NEAR's testnet.
+Returns [JSON Schema](https://json-schema.org/) for CONTRACT_NAME. If the contract name ends in `.near`, it's assumed to be on NEAR's mainnet. Otherwise, it assumes NEAR's testnet.
 
 This is the JSON Schema used by [RAEN Admin](https://raen.dev/admin) and other (upcoming) tooling.
 

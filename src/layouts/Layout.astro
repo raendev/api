@@ -25,9 +25,18 @@ const { title } = Astro.props;
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
 		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
-		--color-text: hsl(12, 5%, 4%);
-		--color-bg: hsl(10, 21%, 95%);
-		--color-border: hsl(17, 24%, 90%);
+		--black: hsl(12, 5%, 4%);
+		--white: hsl(10, 21%, 95%);
+		--color-text: var(--black);
+		--color-bg: var(--white);
+		--color-shadow: rgba(0, 0, 0, .1);
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-text: var(--white);
+			--color-bg: var(--black);
+      --color-shadow: rgba(255, 255, 255, .1);
+		}
 	}
 
 	html {
@@ -54,7 +63,21 @@ const { title } = Astro.props;
 	}
 
 	code {
+		padding: 2px 5px;
+		background-color: var(--color-shadow);
+		border-radius: 4px;
+		box-shadow: 0 0 0.2em var(--color-shadow) inset;
+	}
+
+	pre {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
 	}
+
+	pre > code {
+		all: unset;
+	}
+
 </style>
