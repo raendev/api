@@ -30,4 +30,4 @@ Some notes:
   - If method names match a known standard, fill in argument types matching standard (does not always match actual implementation!). Otherwise:
   - Scrape blockchain history to see how these methods were called, then assume the argument signature has not changed since then.
 
-The third situation will return with a [204: Non-Authoritative Information](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/203) status code.
+The third situation will return with a [203: Non-Authoritative Information](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/203) status code.
