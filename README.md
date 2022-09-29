@@ -14,7 +14,7 @@ You can do all of this with the RAEN CLI just as easily (coming soon!), but some
 Use It
 ======
 
-    GET https://raen.dev/api/[CONTRACT_NAME].json
+    GET https://api.raen.dev/[CONTRACT_NAME].json
 
 Returns [JSON Schema](https://json-schema.org/) for CONTRACT_NAME. If the contract name ends in `.near`, it's assumed to be on NEAR's mainnet. Otherwise, it assumes NEAR's testnet.
 
