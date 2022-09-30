@@ -1,5 +1,4 @@
 import { init } from "."
-import { Buffer } from "node:buffer"
 import { readCustomSection } from "wasm-walrus-tools"
 import brotliDecompress from 'brotli/decompress';
 import type { Near } from "near-api-js"
@@ -46,16 +45,18 @@ async function fetchJsonAddressOrData(contract: string, near: Near): Promise<str
     finality: 'final',
     request_type: 'view_code',
   }) as ContractCodeView
-  const wasm = Buffer.from(code.code_base64, "base64")
+  const wasmStr = atob(code.code_base64)
+  const wasm = new Uint8Array(new ArrayBuffer(wasmStr.length));
+  for (let i = 0; i < wasmStr.length; i++) { wasm[i] = wasmStr.charCodeAt(i) }
   const jsonCustomSection = await readCustomSection(wasm, "json")
   if (!jsonCustomSection) {
     throw new NoCustomSection()
   }
 
-  let startOfJson = Buffer.from(jsonCustomSection.slice(0, 20)).toString('utf8');
+  let startOfJson = new TextDecoder().decode(jsonCustomSection.slice(0, 20))
   // if link return string
   if (startOfJson.startsWith("https://")) {
-    return Buffer.from(jsonCustomSection).toString('utf8');
+    return new TextDecoder().decode(jsonCustomSection)
   }
   // Else is compressed data
   let decompressedData = brotliDecompress(jsonCustomSection);
@@ -63,5 +64,5 @@ async function fetchJsonAddressOrData(contract: string, near: Near): Promise<str
   if (!decompressedData) {
     throw new DecompressionFailure()
   }
-  return Buffer.from(decompressedData).toString("utf8");
+  return new TextDecoder().decode(decompressedData)
 }
