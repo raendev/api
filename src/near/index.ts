@@ -1,4 +1,5 @@
-import * as naj from "near-api-js"
+import type { Near } from "near-api-js"
+import { InMemoryKeyStore } from "near-api-js/lib/key_stores"
 
 export * from './schema'
 
@@ -29,7 +30,7 @@ export class UnknownNetworkError extends Error {
 export interface ContractInterface {
   contract: string,
   config: typeof testnetConfig | typeof mainnetConfig
-  near: naj.Near
+  near: Near
 }
 
 /**
@@ -52,7 +53,7 @@ export function init(contract: string): ContractInterface {
 
   const near = new naj.Near({
     ...config,
-    keyStore: new naj.keyStores.InMemoryKeyStore()
+    keyStore: new InMemoryKeyStore()
   })
 
   return {
