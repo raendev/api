@@ -1,5 +1,4 @@
-import type { Near } from "near-api-js"
-import { InMemoryKeyStore } from "near-api-js/lib/key_stores"
+import { keyStores, Near } from "near-api-js"
 
 export * from './schema'
 
@@ -51,9 +50,9 @@ export function init(contract: string): ContractInterface {
 
   if (!config) throw new UnknownNetworkError(contract)
 
-  const near = new naj.Near({
+  const near = new Near({
     ...config,
-    keyStore: new InMemoryKeyStore()
+    keyStore: new keyStores.InMemoryKeyStore()
   })
 
   return {
