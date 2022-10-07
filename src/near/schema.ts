@@ -1,7 +1,8 @@
 import { init } from "."
 import { readCustomSection } from "wasm-walrus-tools"
 import brotliDecompress from 'brotli/decompress';
-import type { ContractCodeView, Near } from "near-api-js"
+import type { Near } from "near-api-js"
+import type { ContractCodeView } from "near-api-js/lib/providers/provider"
 import type { JSONSchema7 } from "json-schema"
 
 export async function fetchSchema(contract: string): Promise<JSONSchema7> {
