@@ -1,4 +1,5 @@
 import { keyStores, Near } from "near-api-js"
+import { UnknownNetwork } from "./errors"
 
 export * from './schema'
 
@@ -15,16 +16,6 @@ const testnetConfig = {
   walletUrl: "https://wallet.testnet.near.org",
   helperUrl: "https://helper.testnet.near.org",
 } as const
-
-export class UnknownNetworkError extends Error {
-  constructor(contract: string) {
-    super(
-      `Don't know what network settings to use for contract "${contract}". ` +
-      `Expected name to end in 'testnet' or 'near'.`
-    )
-    this.name = 'UnknownNetworkError'
-  }
-}
 
 export interface ContractInterface {
   contract: string,
@@ -48,7 +39,7 @@ export function init(contract: string): ContractInterface {
       ? testnetConfig
       : undefined
 
-  if (!config) throw new UnknownNetworkError(contract)
+  if (!config) throw new UnknownNetwork(contract)
 
   const near = new Near({
     ...config,

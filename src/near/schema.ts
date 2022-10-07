@@ -4,6 +4,7 @@ import brotliDecompress from 'brotli/decompress';
 import type { Near } from "near-api-js"
 import type { ContractCodeView } from "near-api-js/lib/providers/provider"
 import type { JSONSchema7 } from "json-schema"
+import { DecompressionFailure, NoCustomSection } from "./errors"
 
 export async function fetchSchema(contract: string): Promise<JSONSchema7> {
   const { near } = init(contract)
@@ -25,18 +26,6 @@ export async function fetchSchema(contract: string): Promise<JSONSchema7> {
 
   // TODO validate schema adheres to JSONSchema7
   return schema
-}
-
-class NoCustomSection extends Error {
-  constructor() {
-    super("Contract Wasm does not have a custom section called \"json\"")
-  }
-}
-
-class DecompressionFailure extends Error {
-  constructor() {
-    super("Failed to decompile custom section")
-  }
 }
 
 async function fetchJsonAddressOrData(contract: string, near: Near): Promise<string> {

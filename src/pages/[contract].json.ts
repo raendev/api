@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { fetchSchema } from '../near/schema';
+import * as errors from '../near/errors';
 
 export const get: APIRoute = async ({ params }) => {
   const { contract } = params;
@@ -17,16 +18,13 @@ export const get: APIRoute = async ({ params }) => {
       status: 200
     })
   } catch (e: unknown) {
-    let message: string;
-    if (e instanceof Error) {
-      message = e.message
-    } else {
-      message = String(e)
+    const error = e instanceof Error ? e.message : String(e)
+    let status: number = 501 // not implemented
+
+    if (e instanceof errors.UnknownNetwork) {
+      status = 400 // bad request
     }
-    return new Response(JSON.stringify({
-      error: message
-    }), {
-      status: 501 // not implemented
-    });
+
+    return new Response(JSON.stringify({ error }), { status });
   }
 }
