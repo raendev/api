@@ -22,9 +22,9 @@ This is the JSON Schema used by [RAEN Admin](https://raen.dev/admin) and other (
 
 Some notes:
 
-* It first checks if the contract was built with RAEN, and, if so, converts the embedded WIT to JSON Schema
-* If the contract was not built with RAEN, it checks if it was built with [Pagoda](https://www.pagoda.co/)'s ABI tooling. If it was, Pagoda's schema is converted to RAEN-compatible JSON Schema.
-* If the contract has neither of these, a best-effort attempt is made to scrape together a maybe-acceptable schema. The strategy:
+* It first checks if the contract was built with RAEN, and, if so, converts the embedded WIT to JSON Schema (ok, that's aspirational; RAEN currently embeds brotli-compressed JSON Schema rather than WIT. Right now, this API extracts and decompresses this JSON Schema only.)
+* [aspirational] If the contract was not built with RAEN, it checks if it was built with [Pagoda](https://www.pagoda.co/)'s ABI tooling. If it was, Pagoda's schema is converted to RAEN-compatible JSON Schema.
+* [aspirational] If the contract has neither of these, a best-effort attempt is made to scrape together a maybe-acceptable schema. The strategy:
   - Hard-code schema for certain popular contracts. Otherwise:
   - Inspect Wasm binary for method names.
   - If method names match a known standard, fill in argument types matching standard (does not always match actual implementation!). Otherwise:
