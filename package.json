@@ -11,15 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^1.0.4",
-    "astro": "^1.3.0",
-    "brotli": "^1.3.3",
-    "near-api-js": "^1.1.0",
+    "@astrojs/netlify": "*",
+    "astro": "*",
+    "brotli": "*",
+    "near-api-js": "*",
     "wasm-walrus-tools": "github:AhaLabs/wasm-walrus-tools#v0.1.0"
   },
   "devDependencies": {
-    "@types/json-schema": "^7.0.11",
-    "@types/node": "^18.7.23",
-    "esbuild": "^0.15.10"
+    "@types/json-schema": "*",
+    "@types/node": "*",
+    "esbuild": "*"
   }
 }
