@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@astrojs/netlify": "*",
-    "astro": "*",
+    "astro": "2.1.2",
     "brotli": "*",
     "near-api-js": "*",
     "wasm-walrus-tools": "github:AhaLabs/wasm-walrus-tools#v0.1.0"
