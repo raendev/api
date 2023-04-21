@@ -598,6 +598,126 @@
   resolved "https://registry.yarnpkg.com/@ljharb/has-package-exports-patterns/-/has-package-exports-patterns-0.0.2.tgz#c1718939b65efa1f45f53686c2fcfa992b9fb68f"
   integrity sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==
 
+"@near-js/accounts@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/accounts/-/accounts-0.0.2.tgz#8b0fe5f245a4379fd62ea5b48e0c14b39eee54ec"
+  integrity sha512-HCshQUI4LhkVXxR7AWNkaWcLkQQzEzefX/21+fACiVuLCYQ31GtNh+piyI9PVkPChAU/obf9zwwWNC2QCV/f6g==
+  dependencies:
+    "@near-js/crypto" "0.0.2"
+    "@near-js/providers" "0.0.2"
+    "@near-js/signers" "0.0.2"
+    "@near-js/transactions" "0.0.2"
+    "@near-js/types" "0.0.2"
+    "@near-js/utils" "0.0.2"
+    ajv "^8.11.2"
+    ajv-formats "^2.1.1"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    depd "^2.0.0"
+    near-abi "0.1.1"
+
+"@near-js/crypto@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/crypto/-/crypto-0.0.2.tgz#c42d4ff57c49521656f208c789596963612b3773"
+  integrity sha512-hXEn4y73ifnde3c1nI/l8UCbQ7QVEdUw5RgBRYzOoloQeKjY97h/6q/Y+ZfeaKHtN+OEq6MZwkOj1RClmjyB2Q==
+  dependencies:
+    "@near-js/types" "0.0.2"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    tweetnacl "^1.0.1"
+
+"@near-js/keystores-browser@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/keystores-browser/-/keystores-browser-0.0.2.tgz#f13493aca94db6e2c966cfddb8085b2f7ef1ef45"
+  integrity sha512-k4HznJ0W3OvylWcNdRMQrKA+3bXH4HaAmI/4GSSPanj1N9Set5l8oEcbwx3yaaM16+JCvyY2uVJbFH5tLBGriw==
+  dependencies:
+    "@near-js/crypto" "0.0.2"
+    "@near-js/keystores" "0.0.2"
+
+"@near-js/keystores-node@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/keystores-node/-/keystores-node-0.0.2.tgz#91763559a5e2abcfc2629585f15441454865c0b9"
+  integrity sha512-dBrzOViRF/fffF04oXaPnv3+nfFBcJeRbwWlof7pPlqanWwYvAwPg7wbzypJuZI9Y98voHb35ogHh1xYIFMDhg==
+  dependencies:
+    "@near-js/crypto" "0.0.2"
+    "@near-js/keystores" "0.0.2"
+
+"@near-js/keystores@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/keystores/-/keystores-0.0.2.tgz#62eefa46daff5051deb40ba6df10c369ca767655"
+  integrity sha512-O3MNE2fE+mpxxJ8wLw0kxiAG65Pr37qegBM0JiIkRe7TsfBEz8AFTa0MB1+hypvuTCZvxL8wZKSBzMiDkEduHQ==
+  dependencies:
+    "@near-js/crypto" "0.0.2"
+    "@near-js/types" "0.0.2"
+
+"@near-js/providers@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/providers/-/providers-0.0.2.tgz#9c39a419be1956971049cb42fc71c76e47a842f5"
+  integrity sha512-w1sD4SUzYhEGBHLYjzMUoOvKpOHlydzSNYJd+khvY4T2/1r9MROFkgEwjOWKEtf3B6ox1BabEozuekEWS5/oQg==
+  dependencies:
+    "@near-js/transactions" "0.0.2"
+    "@near-js/types" "0.0.2"
+    "@near-js/utils" "0.0.2"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    http-errors "^1.7.2"
+  optionalDependencies:
+    node-fetch "^2.6.1"
+
+"@near-js/signers@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/signers/-/signers-0.0.2.tgz#346e8da219d5dbe2a4b5aca43e421e370726a8c3"
+  integrity sha512-69nnrCs/jMOaLLLsGMG126nzANpkIA0fesJBzNtxyXqoVE+7nBMppMg41UKWetwn5AQhhkvugpFCe+OlcpOCHg==
+  dependencies:
+    "@near-js/crypto" "0.0.2"
+    "@near-js/keystores" "0.0.2"
+    js-sha256 "^0.9.0"
+
+"@near-js/transactions@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/transactions/-/transactions-0.0.2.tgz#93ae8c8fcd3f63e9c69a8736ae447f88bf8db387"
+  integrity sha512-Pd687iAi0tooRi6r1a/i3zzcqrpkphtWsJcNlQTBlQbr5UumSPm9jwoOxajpqLYvUiP1P55eutaSODDGBk/eMQ==
+  dependencies:
+    "@near-js/crypto" "0.0.2"
+    "@near-js/signers" "0.0.2"
+    "@near-js/types" "0.0.2"
+    "@near-js/utils" "0.0.2"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+    js-sha256 "^0.9.0"
+
+"@near-js/types@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/types/-/types-0.0.2.tgz#f5eee03c4f61dd154f44cc8e5f910b37c487ef50"
+  integrity sha512-+uZtc1ZsGAwK8udlUaHRJEjkRXkqwF4UaVXdaEpCoH0VyKc2W7DajECkIqAph7V80hJqoixLBUi/Pr/EP5WvYA==
+  dependencies:
+    bn.js "5.2.1"
+
+"@near-js/utils@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/utils/-/utils-0.0.2.tgz#b4c3b85006976e3297ad43ea509087e7d0f50a7a"
+  integrity sha512-739GpXugsOMvkpsegF7M40PvIk2t1TnVpNU2b8VoLeB26e87q5n2+TbkLNeyMuX+zIPB9iBRI2a3CE/Yfoh0Lg==
+  dependencies:
+    "@near-js/types" "0.0.2"
+    bn.js "5.2.1"
+    depd "^2.0.0"
+    mustache "^4.0.0"
+
+"@near-js/wallet-account@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@near-js/wallet-account/-/wallet-account-0.0.2.tgz#3ef70b348137407a70e4ad2fd06c7981ce5fa034"
+  integrity sha512-GOtNWimOBIbkLd6hP8705jmVxcAMqeygEcpZZniiBzHxmxgsm/kAWXLNtL8WmUn/nyLRqYMdQVL+pKl8nHUMAw==
+  dependencies:
+    "@near-js/accounts" "0.0.2"
+    "@near-js/crypto" "0.0.2"
+    "@near-js/keystores" "0.0.2"
+    "@near-js/signers" "0.0.2"
+    "@near-js/transactions" "0.0.2"
+    "@near-js/types" "0.0.2"
+    "@near-js/utils" "0.0.2"
+    bn.js "5.2.1"
+    borsh "^0.7.0"
+
 "@netlify/functions@^1.0.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@netlify/functions/-/functions-1.4.0.tgz#027a2e5d54df5519ccbd14cf450231e97bbbf93a"
@@ -690,7 +810,7 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/json-schema@*":
+"@types/json-schema@*", "@types/json-schema@^7.0.11":
   version "7.0.11"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
   integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
@@ -764,6 +884,23 @@ acorn@^8.8.1:
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
+
+ajv-formats@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
+  integrity sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==
+  dependencies:
+    ajv "^8.0.0"
+
+ajv@^8.0.0, ajv@^8.11.2:
+  version "8.12.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.12.0.tgz#d1a0527323e22f53562c567c00991577dfbe19d1"
+  integrity sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
+    uri-js "^4.2.2"
 
 ansi-align@^3.0.1:
   version "3.0.1"
@@ -1459,6 +1596,11 @@ extend@^3.0.0:
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
 
+fast-deep-equal@^3.1.1:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
+  integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
+
 fast-glob@^3.2.11:
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
@@ -1830,6 +1972,11 @@ jsesc@^2.5.1:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
+
+json-schema-traverse@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
+  integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
 
 json5@^2.1.3, json5@^2.2.2:
   version "2.2.3"
@@ -2390,21 +2537,38 @@ nanoid@^3.3.4:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
   integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
 
-near-api-js@*:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/near-api-js/-/near-api-js-1.1.0.tgz#907e807f052c1f043c6fbf28f61872de3c02235a"
-  integrity sha512-qYKv1mYsaDZc2uYndhS+ttDhR9+60qFc+ZjD6lWsAxr3ZskMjRwPffDGQZYhC7BRDQMe1HEbk6d5mf+TVm0Lqg==
+near-abi@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/near-abi/-/near-abi-0.1.1.tgz#b7ead408ca4ad11de4fe3e595d30a7a8bc5307e0"
+  integrity sha512-RVDI8O+KVxRpC3KycJ1bpfVj9Zv+xvq9PlW1yIFl46GhrnLw83/72HqHGjGDjQ8DtltkcpSjY9X3YIGZ+1QyzQ==
   dependencies:
+    "@types/json-schema" "^7.0.11"
+
+near-api-js@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/near-api-js/-/near-api-js-2.0.4.tgz#e7e22885bf9091466485c80ee36aea8d476beb27"
+  integrity sha512-JQjpcdJvnR9XdsXyZLXhh3mhe5tldL9pT9l1LNBE7cHw5sDZeQJPmlU2ZIBTQ0nE2jU4Us2XGpqetX5QH8EsPw==
+  dependencies:
+    "@near-js/accounts" "0.0.2"
+    "@near-js/crypto" "0.0.2"
+    "@near-js/keystores" "0.0.2"
+    "@near-js/keystores-browser" "0.0.2"
+    "@near-js/keystores-node" "0.0.2"
+    "@near-js/providers" "0.0.2"
+    "@near-js/signers" "0.0.2"
+    "@near-js/transactions" "0.0.2"
+    "@near-js/types" "0.0.2"
+    "@near-js/utils" "0.0.2"
+    "@near-js/wallet-account" "0.0.2"
+    ajv "^8.11.2"
+    ajv-formats "^2.1.1"
     bn.js "5.2.1"
     borsh "^0.7.0"
-    bs58 "^4.0.0"
     depd "^2.0.0"
     error-polyfill "^0.1.3"
     http-errors "^1.7.2"
-    js-sha256 "^0.9.0"
-    mustache "^4.0.0"
+    near-abi "0.1.1"
     node-fetch "^2.6.1"
-    text-encoding-utf-8 "^1.0.2"
     tweetnacl "^1.0.1"
 
 nlcst-to-string@^3.0.0:
@@ -2624,6 +2788,11 @@ property-information@^6.0.0:
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-6.2.0.tgz#b74f522c31c097b5149e3c3cb8d7f3defd986a1d"
   integrity sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==
 
+punycode@^2.1.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
+  integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
@@ -2713,6 +2882,11 @@ remark-smartypants@^2.0.0:
     retext "^8.1.0"
     retext-smartypants "^5.1.0"
     unist-util-visit "^4.1.0"
+
+require-from-string@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.2.tgz#89a7fdd938261267318eafe14f9c32e598c36909"
+  integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
 
 resolve@^1.17.0, resolve@^1.22.1:
   version "1.22.1"
@@ -3192,6 +3366,13 @@ update-browserslist-db@^1.0.10:
   dependencies:
     escalade "^3.1.1"
     picocolors "^1.0.0"
+
+uri-js@^4.2.2:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
+  integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
+  dependencies:
+    punycode "^2.1.0"
 
 util-deprecate@^1.0.1:
   version "1.0.2"
